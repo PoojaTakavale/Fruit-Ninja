@@ -1,2 +1,7 @@
-# Fruit-Ninja
-CMPE 202 Project: Greenfoot integrated with Kinect: Fruit Ninja
+Fruit-Slash
+===========
+
+Game developed in Greenfoot based on Fruit ninja
+
+Link to the Game Demo:
+http://www.youtube.com/watch?v=9cTfVXllgRE
