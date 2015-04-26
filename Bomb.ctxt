@@ -3,5 +3,5 @@ comment0.params=
 comment0.target=void\ act()
 comment1.params=
 comment1.target=void\ pop()
-comment1.text=\n\ Pop\ this\ bomb.\n
+comment1.text=\r\n\ Pop\ this\ bomb.\r\n
 numComments=2

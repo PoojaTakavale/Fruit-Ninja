@@ -56,6 +56,7 @@ public class Katna extends Actor implements Subject
                 notifyObservers(f, fn);
                 //Greenfoot.delay(20);
                 fn.removeObject(f);
+                
             }
         }
                      

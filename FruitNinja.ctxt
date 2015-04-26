@@ -15,4 +15,6 @@ comment6.params=
 comment6.target=void\ gameOver()
 comment7.params=
 comment7.target=void\ populate()
-numComments=8
+comment8.params=f\ a\ b
+comment8.target=void\ addObjectFromActor(Fruit,\ int,\ int)
+numComments=9

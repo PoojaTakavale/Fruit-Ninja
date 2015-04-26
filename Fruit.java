@@ -51,7 +51,19 @@ public class Fruit extends Actor implements Observer
      {
       Orange o = new Orange();
       o.pop(fn);
-     }  
+     }
+     else if(fruitName.contains("bunch"))
+     {
+      Bunch b = new Bunch();
+      b.pop(fn);
+      
+     }
+     else if(fruitName.contains("strawberry"))
+     {
+      Strawberry s = new Strawberry();
+      s.pop(fn);
+     }
+     
     }
     
 }

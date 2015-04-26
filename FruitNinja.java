@@ -18,6 +18,7 @@ public class FruitNinja extends World
     {    
         super(600, 500, 1);
         this.showStartScreen();
+        //Greenfoot.setWorld(this);
     }
                
     public void showStartScreen(){
@@ -57,11 +58,11 @@ public class FruitNinja extends World
             xc=Greenfoot.getRandomNumber(600);
             if(xc>=20 && xc<=580)           // so that fruit does'nt go out of the screen
             {
-                x=Greenfoot.getRandomNumber(4);                 
+                x=Greenfoot.getRandomNumber(5);                 
               switch(x)
               {           
                 case 0:
-                    addObject(new Bomb(), xc, 500);
+                  addObject(new Bomb(), xc, 500);
                     //break;
                 case 1:
                   addObject(FruitFactory.create(FruitType.APPLE),xc, 500);
@@ -71,6 +72,12 @@ public class FruitNinja extends World
                   break;
                 case 3:
                   addObject((FruitFactory.create(FruitType.ORANGE)),xc, 500);
+                  break;
+                case 4:
+                  Bunch b = (Bunch)FruitFactory.create(FruitType.BUNCH);
+                  b.addChildren(this);
+                 // System.out.println("Loop value " + this);
+                  addObject(b,xc, 500);
                   break;
               }
               if((counter.getValue()>0 && counter.getValue()%200==0) && num==0 )
@@ -114,6 +121,11 @@ public class FruitNinja extends World
     public void populate()
     {
         addObject(counter, 100, 460);
-    }  
+    }
+    
+    public void addObjectFromActor(Fruit f, int a, int b)
+    {
+        addObject(f,a,b);
+    }
     
 }

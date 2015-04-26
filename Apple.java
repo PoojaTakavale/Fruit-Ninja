@@ -5,7 +5,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * 
  * @author Poul Henriksen
  */
-public class Apple extends Fruit
+public class Apple extends Fruit implements Component
 {
     /**
      * Moving the apple. 
@@ -22,24 +22,10 @@ public class Apple extends Fruit
     
     public void act() 
     {
-        
-        
-       gravity();
-       
-        if(flag==1 && getY()==0)
-        {
-            getImage().setTransparency(0);
-            flag=0;
-        }
-
-        //make the apple disappear
-        if(getY()>=490 && num>0)
-        {
-           getWorld().removeObject(this);
-        }   
+        trajectory();
     }
-     public void gravity() {
-        setLocation(getX(), getY() +y);
+     public void trajectory() {
+       setLocation(getX(), getY() +y);
        ht=100;
         
          if(getY()<=ht)
@@ -58,6 +44,17 @@ public class Apple extends Fruit
             x=x*(2);
             y=y*(-2);
         }
+        if(flag==1 && getY()==0)
+        {
+            getImage().setTransparency(0);
+            flag=0;
+        }
+
+        //make the apple disappear
+        if(getY()>=490 && num>0)
+        {
+           getWorld().removeObject(this);
+        }   
     }
    
  

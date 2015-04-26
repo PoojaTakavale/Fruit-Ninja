@@ -7,6 +7,6 @@
  */
 public enum FruitType {
 
-APPLE, BANANA, ORANGE
+APPLE, BANANA, ORANGE, BUNCH, STRAWBERRY
 }
 

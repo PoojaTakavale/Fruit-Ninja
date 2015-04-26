@@ -6,7 +6,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  * @author (your name) 
  * @version (a version number or a date)
  */
-public class Banana extends Fruit
+public class Banana extends Fruit implements Component
 {
     /**
      * Moving the banana. 
@@ -23,13 +23,17 @@ public class Banana extends Fruit
     
     public void act() 
     {
+        trajectory();
+    }    
+    
+    public void trajectory()
+    {
         setLocation(getX(), getY() +y);
         ht=100;//till what height can fruit travel
         if(getY()<=ht)
         {
             num++;
             loop=Greenfoot.getRandomNumber(2);
-            //dist = Greenfoot.getRandomNumber(5);
             if(loop==0)//loop - how much dist to move after reaching a particular height(ht)
             {  
              move(-20);   
@@ -53,12 +57,10 @@ public class Banana extends Fruit
             move(-25);
             x=0;
         }
-
+        //make the orange disappear
         if(getY()>=490 && num>0)
-        {
            getWorld().removeObject(this); 
-        }
-    }    
+    }
     
     /**
      * Pop this banana.
